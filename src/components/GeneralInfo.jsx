@@ -18,33 +18,57 @@ function GeneralInfo() {
   };
 
   return (
-    <div>
-      <h2>Personal Info</h2>
+    <div className="">
+      <h2 className="info-heading">Personal Info</h2>
       {isEditing ? (
         <form>
           <label>
             First Name:
-            <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)}/>
+            <input
+              type="text"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+            />
           </label>
           <label>
             Last Name:
-            <input type="text" value={lastName}  onChange={(e) => SetLastName(e.target.value)}/>
+            <input
+              type="text"
+              value={lastName}
+              onChange={(e) => SetLastName(e.target.value)}
+            />
           </label>
           <label>
             Email:
-            <input type="email" value={email}  onChange={((e) => SetEmail(e.target.value))}/>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => SetEmail(e.target.value)}
+            />
           </label>
           <label>
             Phone:
-            <input type="number" value={phone} onChange={(e) => SetPhone(e.target.value)}/>
+            <input
+              type="number"
+              value={phone}
+              onChange={(e) => SetPhone(e.target.value)}
+            />
           </label>
         </form>
       ) : (
-        <div>
-          <p>First Name: {firstName}</p>
-          <p> Last Name: {lastName}</p>
-          <p>Email : {email}</p>
-          <p>Phone : {phone}</p>
+        <div className="personal-info">
+          <p className="personal-name">
+            {firstName}
+            {lastName}
+          </p>
+          <p className="email">
+            <i className="fa fa-email-bulk" aria-hidden="true"></i>
+            {email}
+          </p>
+          <p className="phone">
+            <i className="fa fa-phone" aria-hidden="true"></i>
+            {phone}
+          </p>
         </div>
       )}
       {isEditing ? (

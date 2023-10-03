@@ -17,6 +17,7 @@ export default function Education() {
 
   return (
     <div>
+      <h2 className="info-heading">Education</h2>
       {isEditing ? (
         <form>
           <label>
@@ -27,7 +28,6 @@ export default function Education() {
               onChange={(e) => setCollegeName(e.target.value)}
             />
           </label>
-          0
           <label>
             Study Title :
             <input
@@ -39,16 +39,16 @@ export default function Education() {
           <label>
             Date of Study:
             <input
-              type="text"
+              type="date"
               value={studyDate}
               onChange={(e) => SetStudyDate(e.target.value)}
             />
           </label>
         </form>
       ) : (
-        <div>
-          <p>College Name : {collegeName}</p>
-          <p>Study Title : {studyTitle}</p>
+        <div className="personal-info">
+          <p id="college-name">{collegeName}</p>
+          <p>{studyTitle}</p>
           <p>Date of Study : {studyDate}</p>
         </div>
       )}
