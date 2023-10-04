@@ -6,7 +6,7 @@
 
   /* color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87); */
-  background-color: #ffffff;
+  background-color: #f5f5fa;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,8 +15,45 @@
   -webkit-text-size-adjust: 100%;
 }
 
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.sidebar {
+  width: 25%;
+  background: linear-gradient(to right, #efc7ff, #e2ebff);
+
+  /* background-color: white; */
+  margin-right: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06),
+    0px 0px 1px rgba(0, 0, 0, 0.04);
+}
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.right-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+
+  border-top: 10px solid rgb(172, 228, 234);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06),
+    0px 0px 1px rgba(0, 0, 0, 0.04);
+  border-radius: 10px;
+  width: 100%;
+  background-color: #ffffff;
+}
+
 label {
-  display: block;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 10px;
   font-weight: bold;
   color: #333;
@@ -27,7 +64,7 @@ input[type='text'],
 input[type='date'],
 input[type='email'],
 input[type='number'] {
-  width: 100%;
+  width: 80%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -42,20 +79,27 @@ input[type='number'] {
 body {
   /* display: flex; */
   /* justify-content: center; */
-  width: 75%;
+
+  width: 85%;
 }
 
 /* Style for the rounded image container */
 .rounded-image {
-  border-radius: 50%;
-  /* overflow: hidden; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border-radius: 50%;
+  width: 300px;
+
+  overflow: hidden; */
 }
 
 /* Style for the image */
 .rounded-image img {
   border-radius: 50%;
-  width: 300px;
-  height: auto;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
 }
 
 button {
@@ -88,11 +132,13 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(39, 52, 55);
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06),
+    0px 0px 1px rgba(0, 0, 0, 0.04);
   /* width: 500px; */
   padding: 10px;
   border-radius: 10px;
-  color: white;
+  color: rgb(34, 34, 34);
   /* background-color: rgb(66, 66, 66); */
 }
 p {
@@ -135,4 +181,21 @@ i {
   width: 300px;
   padding: 2px;
   border-radius: 10px;
+}
+
+.side-button {
+  background-color: rgb(255, 255, 255);
+  color: #333;
+  width: 90%;
+  margin: 5px;
+  padding: 10px;
+
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06),
+    0px 0px 1px rgba(0, 0, 0, 0.04);
+
+  transition: border 0.2s ease-in-out;
+}
+.side-button:hover {
+  border: 0.5px solid rgb(167, 167, 167);
+  background-color: white;
 }

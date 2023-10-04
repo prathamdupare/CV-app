@@ -47,7 +47,7 @@ export default function PictureUpload() {
           </form>
         </>
       ) : (
-        <div>
+        <div className="rounded-image">
           <img src={selectedImage} alt="Selected" />
         </div>
       )}
@@ -56,7 +56,7 @@ export default function PictureUpload() {
           <button onClick={handleSubmit}>Submit</button>
         </div>
       ) : (
-        <div onClick={handleEdit}>Edit</div>
+        <button onClick={handleEdit}>Edit</button>
       )}
     </>
   );
